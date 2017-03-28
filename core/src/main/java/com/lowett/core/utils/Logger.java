@@ -1,7 +1,7 @@
 package com.lowett.core.utils;
 
 
-import com.fit.android.BuildConfig;
+import com.lowett.core.BuildConfig;
 
 public class Logger {
     protected static final String TAG = "tag";
