@@ -3,8 +3,8 @@ package com.lowett.core.net.internal;
 import android.os.Build;
 import android.os.Handler;
 import android.os.Looper;
+import android.support.annotation.NonNull;
 
-import org.greenrobot.greendao.annotation.NotNull;
 
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
@@ -50,7 +50,7 @@ public class Platform {
             private final Handler handler = new Handler(Looper.getMainLooper());
 
             @Override
-            public void execute(@NotNull Runnable r) {
+            public void execute(@NonNull Runnable r) {
                 handler.postDelayed(r, 666);
             }
 

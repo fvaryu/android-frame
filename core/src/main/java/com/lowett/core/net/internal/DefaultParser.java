@@ -1,6 +1,5 @@
 package com.lowett.core.net.internal;
 
-import com.fit.android.net.ResponseData;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 

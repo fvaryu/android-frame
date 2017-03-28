@@ -3,7 +3,8 @@ package com.lowett.core.net.internal;
 import android.os.AsyncTask;
 import android.text.TextUtils;
 
-import com.fit.android.utils.file.FileUtil;
+
+import com.lowett.core.utils.file.FileUtil;
 
 import java.io.File;
 import java.io.FileOutputStream;

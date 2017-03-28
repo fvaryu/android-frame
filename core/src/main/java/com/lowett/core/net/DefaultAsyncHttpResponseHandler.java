@@ -24,7 +24,7 @@ import okhttp3.Response;
  */
 public class DefaultAsyncHttpResponseHandler implements ResponseHandleInterface {
 
-    private LoadingDialog mLoadingDialog;
+//    private LoadingDialog mLoadingDialog;
     private Context mContext;
     private ParserResult mParserResult = new ParserResult();
     private boolean isShow;
@@ -53,22 +53,22 @@ public class DefaultAsyncHttpResponseHandler implements ResponseHandleInterface 
     public void onStart() {
         if (!isShow) return;
 
-        mLoadingDialog = new LoadingDialog(mContext);
-        mLoadingDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
-            @Override
-            public void onDismiss(DialogInterface dialog) {
-                /**
-                 * 如果是网络请求完成，dialog消失不在去调用取消请求 isShow = false
-                 * 如果是用户点击back/屏幕，要请求cancel request， isShow = true
-                 * {@link DefaultAsyncHttpResponseHandler#dismiss()}
-                 */
-                if (!isShow) {
-                    return;
-                }
-               cancelByTag(tag);
-            }
-        });
-        mLoadingDialog.show();
+//        mLoadingDialog = new LoadingDialog(mContext);
+//        mLoadingDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+//            @Override
+//            public void onDismiss(DialogInterface dialog) {
+//                /**
+//                 * 如果是网络请求完成，dialog消失不在去调用取消请求 isShow = false
+//                 * 如果是用户点击back/屏幕，要请求cancel request， isShow = true
+//                 * {@link DefaultAsyncHttpResponseHandler#dismiss()}
+//                 */
+//                if (!isShow) {
+//                    return;
+//                }
+//               cancelByTag(tag);
+//            }
+//        });
+//        mLoadingDialog.show();
     }
 
 
@@ -91,11 +91,11 @@ public class DefaultAsyncHttpResponseHandler implements ResponseHandleInterface 
     }
 
     private void dismiss() {
-        if (!isShow || mLoadingDialog == null) {
-            return;
-        }
+//        if (!isShow || mLoadingDialog == null) {
+//            return;
+//        }
         isShow = false;
-        mLoadingDialog.dismiss();
+//        mLoadingDialog.dismiss();
     }
 
 
